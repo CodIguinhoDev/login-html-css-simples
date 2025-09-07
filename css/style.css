@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    margin: 20px 0;
+    position: relative;
+}
+
+.container label {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 15px;
+    font-size: 16px;
+    pointer-events: none;
+    color: white;
+    transition: .5s;
+}
+
+.container input {
+    width: 360px;
+    height: 60px;
+    font-size: 16px;
+    padding: 0 15px;
+    border: 1.2 solid white;
+    background: transparent;
+    outline: none;
+    border-radius: 5px;
+}
+
+.container input:focus~label,
+.container input:valid~label {
+    top: 0;
+    background: black;
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-size: 14px;
+}
